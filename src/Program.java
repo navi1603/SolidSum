@@ -1,5 +1,3 @@
-
-
 import Service.IService;
 import Service.ServiceSum;
 import io.*;
@@ -13,9 +11,9 @@ public class Program {
 
     public static void main(String... args) throws FileNotFoundException {
         File file = new File("numbers.txt");
-        Scanner scanner = new Scanner(file);
+        Scanner scanner = new Scanner(System.in);
         IReader reader = new ReaderConsole(scanner);
-        IPrinter printer = new PrinterConsole();
+        IPrinter printer = new PrinterStars();
         IData data = new Data(reader, printer);
         IService service = new ServiceSum();
         Model model = new Model();
