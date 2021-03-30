@@ -11,8 +11,6 @@ public class PrinterStars implements IPrinter {
     public void print (int number) {
         for (int i = 0; i < number; i++) {
             print("*");
-
-
         }
     }
 

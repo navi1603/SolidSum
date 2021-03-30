@@ -2,6 +2,7 @@ import Service.IService;
 import Service.ServiceSum;
 import io.*;
 import model.Model;
+import model.Module;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,10 +17,8 @@ public class Program {
         IPrinter printer = new PrinterStars();
         IData data = new Data(reader, printer);
         IService service = new ServiceSum();
-        Model model = new Model();
-        model.init(data);
-        model.calc(service);
-        model.done(data);
+        Module module = new Module(reader, printer, service);
+        module.execute();
 
     }
 }
