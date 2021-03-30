@@ -2,6 +2,7 @@ package model;
 
 import Service.IService;
 import io.IData;
+import io.IPrinter;
 
 public class Model {
 
@@ -16,9 +17,9 @@ public class Model {
         sum = service.calculate(a, b);
     }
 
-    public void done (IData data) {
-        data.print("Result: ");
-        data.print(sum);
+    public void done (IPrinter printer) {
+        printer.print("Result: ");
+        printer.print(sum);
     }
 
 }
