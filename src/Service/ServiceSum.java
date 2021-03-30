@@ -6,4 +6,5 @@ public class ServiceSum implements IService {
     public int calculate (int a, int b){
         return a + b;
     }
+
 }
